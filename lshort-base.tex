@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contents: Main Input File of the LaTeX2e Introduction
+% $Id: lshort.tex,v 1.2 2003/03/19 20:57:46 oetiker Exp $
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lshort.tex - The not so short introduction to LaTeX
+%                                                      by Tobias Oetiker
+%                                                     oetiker@ee.ethz.ch
+%
+%                           based on LKURTZ.TEX Uni Graz & TU Wien, 1987
+%-----------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 中文~4.20~翻译：中文~CTeX~学会
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% To compile lshort, you need TeX 3.x, LaTeX and makeindex
+%
+% The sources files of the Intro are:
+%      lshort.tex (this file),
+%      titel.tex, contrib.tex, biblio.tex
+%      things.tes, typeset.tex, math.tex, lssym.tex, spec.tex,
+%      lshort.sty, fancyheadings.sty
+%
+% Further the  verbatim.sty and the layout.sty
+% from the LaTeX Tools distribution is
+% required.
+%
+%
+% To print the AMS symbols you need the AMS fonts and the packages
+% amsfonts, eufrak and eucal from (AMS LaTeX 1.2)
+%
+% ---------------------------------------------------------------------
+% This document is ``public domain''. It may be printed and
+% distributed free of charge in its original form (including the
+% list of authors). If it is changed or if parts of it are used
+% within another document, then the author list must input
+% all the original authors AND that author (those authors) who
+% has (have) made the changes.
+%
+% Original Copyright H.Partl, E.Schlegl, and I.Hyna (1987).
+% English Version Copyright by Tobias Oetiker (1994,1995),
+%
+% ---------------------------------------------------------------------
+%
+%
+% Formats also with\textt{letterpaper} option, but the pagebreaks might not
+% fall as nicely.
+%
+% To produce a A5 booklet, use a tool like  pstops or dvitodvi
+% to  past them together in the right order. Most dvi printer drivers
+% can shrink the resulting output to fit on a A4 sheet.
+%
+\makeindex
+
+\begin{document}
+\frontmatter
+\input{title}
+\input{contrib}
+\input{overview}
+\tableofcontents
+\listoffigures
+\listoftables
+\enlargethispage{\baselineskip}
+\mainmatter
+\input{things}
+\input{typeset}
+\input{math}
+\input{lssym}
+\input{spec}
+\input{graphic}
+\input{custom}
+\backmatter
+\input{biblio}
+\refstepcounter{chapter}
+\phantomsection
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+\refstepcounter{chapter}\label{verylast}\mbox{}
+\end{document}

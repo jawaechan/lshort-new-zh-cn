@@ -1,0 +1,12 @@
+% Compile using a4paper:
+% xelatex "\def\lshortpapersize{a4paper}\input lshort-zh-cn.tex"
+% Compile using a5paper:
+% xelatex "\def\lshortpapersize{a5paper}\input lshort-zh-cn.tex"
+\expandafter\ifx\csname lshortpapersize\endcsname\relax
+  \def\lshortpapersize{a4paper}
+\fi
+\documentclass[\lshortpapersize,twoside]{book}
+\usepackage{lshort-style}
+\usepackage{lshort-mylayout}
+\input{lshort-base.tex}
+\endinput
