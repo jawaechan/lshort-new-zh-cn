@@ -13,13 +13,20 @@
 \RequirePackage[francais,greek,german,english]{babel}
 \RequirePackage[autolanguage]{numprint}
 \RequirePackage{mflogo,makeidx,shortvrb,verbatim}
-\RequirePackage{calc}
+\RequirePackage{calc,lastpage}
 \RequirePackage{amsmath,amsthm}
+
+%
+% ctex 宏包 2.2(2015/06/24) 或以上版本
+% ctex 宏包的字号设定会让许多固定字号的字体宏包报太多 warning，应当抑制
+%
+\RequirePackage[fontset=fandol,zihao=false,scheme=chinese,heading=true]{ctex}[2015/06/24]
 
 %
 % 字体和符号宏包
 % 
 \RequirePackage{lmodern,amssymb,latexsym,textcomp,mathrsfs,eucal}
+\RequirePackage[T1]{fontenc}
 % marvosym 宏包已经解决了命名冲突，不需要再 Hack 了。
 % \let\org@Rightarrow\Rightarrow
 \RequirePackage{marvosym}
@@ -27,7 +34,6 @@
 % \let\Rightarrow\org@Rightarrow
 \RequirePackage[gen]{eurosym} % redefines \EUR
 
-\RequirePackage[fontset=fandol,scheme=chinese,heading=true]{ctex}
 %\newcommand{\pozhehao}{\kern0.5ex\rule[.2\baselineskip]{1.5em}{.4pt}\kern0.5ex}
 \providecommand*\pozhehao{—\nobreak —}
 \RequirePackage[colorlinks,hyperindex,plainpages]{hyperref}

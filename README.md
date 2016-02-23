@@ -15,7 +15,7 @@ xelatex lshort-zh-cn
 
 TODO LIST
 ---
-跟进到英文版 v5.0.5 2015.07.18
+跟进到英文版 v5.05 2015.07.18。英文源码放在 lshort-en-src 目录下。
 
 - [x] 更新模板（更新会持续跟进），处理 lshort-style.sty 里的 `<TODO>`
 - [ ] 编写 bat 批处理脚本、bash 脚本和/或 Makefile，生成 A4 和 A5 两个版本
@@ -26,6 +26,7 @@ TODO LIST
 - [ ] 更新第四章 spec.tex 的翻译
 - [ ] 更新第五章 graphic.tex 的翻译
 - [ ] 更新第六章 custom.tex 的翻译
+- [ ] 增添附录 install.tex 的翻译
 
 未来的目标
 ---
